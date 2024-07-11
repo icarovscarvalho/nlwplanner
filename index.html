@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plann.er</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/pt-br.js"></script>
+    <script>dayjs.locale('pt-br')</script>
+
+    <div id="app">
+        <form onsubmit="salvarAtividade(event)">
+            <label id="place" class="card-bg">
+                <ion-icon name="location-outline"></ion-icon>
+                <input
+                type="text"
+                id="destiny-name"
+                placeholder="Florianópolis"
+                onchange="createCityName()">
+            </label>
+
+            <div class="fields">
+                <label class="field-wrapper">
+                    <ion-icon name="pricetag-outline"></ion-icon>
+                    <input
+                    type="text"
+                    class="full-area"
+                    placeholder="Qual a atividade?"
+                    name="atividade"
+                    maxlength="25"
+                    required
+                    >
+                </label>
+                <label class="field-wrapper">
+                    <ion-icon name="calendar-clear-outline"></ion-icon>
+                    <input
+                    type="date"
+                    class="full-area"
+                    name="dia"
+                    id="dateInput"
+                    onclick="calendarioAtualizado()" >
+                    <!-- <select class="full-area" name="dia">
+                        <option value="2024-03-01">01 de fevereiro</option>
+                    </select> -->
+                </label>
+                <label class="field-wrapper">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <select class="full-area" name="hora">
+                        <option value="10:30">10:30</option>
+                    </select>
+                </label>
+            </div>
+            <button>Salvar atividade</button>
+        </form>
+        <main>
+            <h1>Atividades</h1>
+            <section></section>
+        </main>
+    </div>
+
+    <script src="index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
