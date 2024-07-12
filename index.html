@@ -12,6 +12,7 @@
     <script>dayjs.locale('pt-br')</script>
 
     <div id="app">
+        
         <form onsubmit="salvarAtividade(event)">
             <label id="place" class="card-bg">
                 <ion-icon name="location-outline"></ion-icon>
@@ -19,7 +20,7 @@
                 type="text"
                 id="destiny-name"
                 placeholder="Florianópolis"
-                onchange="createCityName()">
+                >
             </label>
 
             <div class="fields">
@@ -57,6 +58,7 @@
         </form>
         <main>
             <h1>Atividades</h1>
+            <div id="destinty-organogram"></div>
             <section></section>
         </main>
     </div>

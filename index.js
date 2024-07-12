@@ -2,8 +2,10 @@ const createCityName = () => {
     const citySearch = document.querySelector('input')
     const city = citySearch.value
     console.log(city)
+
+    const inputDoLocal = document.getElementById('destinty-organogram')
+    return inputDoLocal.innerHTML = `<div class="card-bg field-wrapper">${city}<div/>`
 }
-createCityName()
 
 const formatador = (data)=>{
     return{
@@ -25,24 +27,24 @@ const formatador = (data)=>{
 
 formatador(new Date('2024-04-01'))
 
-const atividade = {
-    nome:"Almoço",
-    data: new Date("2024-07-08 10:00"),
-    finalizada: true
-}
+// const atividade = {
+//     nome:"Almoço",
+//     data: new Date("2024-07-08 10:00"),
+//     finalizada: true
+// }
 
 let atividades = [
-    atividade,
-    {
-        nome:"Academia em grupo",
-        data: new Date("2024-07-09 12:00"),
-        finalizada: false
-    },
-    {
-        nome:"Gamming session",
-        data: new Date("2024-07-09 16:00"),
-        finalizada: true
-    }
+    // atividade,
+    // {
+    //     nome:"Academia em grupo",
+    //     data: new Date("2024-07-09 12:00"),
+    //     finalizada: false
+    // },
+    // {
+    //     nome:"Gamming session",
+    //     data: new Date("2024-07-09 16:00"),
+    //     finalizada: true
+    // }
 ]
 
 const calendarioAtualizado = () => {
@@ -133,34 +135,8 @@ const salvarAtividade = (event) => {
 
     atividades = [novaAtividade,...atividades]
     atualizarListadeAtividades()
+    createCityName()
 }
-
-// const criarDiasSelecao = () => {
-//     const dias = [
-//         "2024-02-28",
-//         "2024-02-29",
-//         "2024-03-01",
-//         "2024-03-02",
-//         "2024-03-03",
-//     ]
-
-//     let diasSelecao = ''
-
-//     for(dia of dias) {
-//         const formatar = formatador(dia)
-//         const diaFormatado = `
-//         ${formatar.dia.numerico} de 
-//         ${formatar.mes}
-//         `
-
-//         diasSelecao += `
-//         <option value="${dia}">${diaFormatado}</option>
-//         `
-//     }
-
-//     document.querySelector('label[name="dia"]').innerHTML = diasSelecao
-// }
-// criarDiasSelecao()
 
 const criarHorasSeleção = () => {
     let  horasDisponiveis = ''
@@ -189,3 +165,4 @@ const concluirAtividade = (event) => {
 
     atividade.finalizada = !atividade.finalizada
 }
+

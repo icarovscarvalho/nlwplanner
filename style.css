@@ -90,6 +90,7 @@
     background-color: white;
     border-radius: 4px;
     cursor: pointer;
+    /* opacity: 0; */
 }
 
 input, select{
@@ -237,4 +238,9 @@ section .card-bg{
     from {
         opacity: 0;
     }
+}
+
+#destinty-organogram{
+    height: 60px;
+    margin-bottom: 10px;
 }
